@@ -4,7 +4,7 @@ green_light_duration = int(input())
 free_window_duration = int(input())
 cars = deque()
 cars_passed = 0
-car_accident = 0
+car_accident = False
 
 green = green_light_duration
 free_window = free_window_duration
@@ -31,7 +31,7 @@ while True:
                     index_of_hit = needed_time - len(car)
                     car_name = str(car)
                     hit_char = car_name[index_of_hit]
-                    car_accident += 1
+                    car_accident = True
                     print(f"A crash happened!\n{car} was hit at {hit_char}.")
                     break
                 else:
@@ -40,6 +40,6 @@ while True:
                     cars.popleft()
                     cars_passed += 1
             else:
-                continue
-if car_accident == 0:
+                break
+if not car_accident:
     print(f"Everyone is safe.\n{cars_passed} total cars passed the crossroads.")
