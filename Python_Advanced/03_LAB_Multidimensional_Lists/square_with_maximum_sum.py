@@ -15,8 +15,7 @@ for i in range(rows):
     matrix.append(sub_list)
 
 max_sum = 0
-mini_matrix_a = []
-mini_matrix_b = []
+sub_matrix = []
 
 for y in range(rows):
     for x in range(cols):
@@ -32,9 +31,8 @@ for y in range(rows):
 
             if result > max_sum:
                 max_sum = result
-                mini_matrix_a = [first_element, second_element]
-                mini_matrix_b = [third_element, forth_element]
+                sub_matrix = [[first_element, second_element], [third_element, forth_element]]
 
-print(*mini_matrix_a)
-print(*mini_matrix_b)
+print(*sub_matrix[0])
+print(*sub_matrix[1])
 print(max_sum)
