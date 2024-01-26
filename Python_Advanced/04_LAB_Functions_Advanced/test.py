@@ -1,6 +1,9 @@
-def some_func(**kwargs):
-    for k, v in kwargs.items():
-        print(f"This is {v} from {v} and he is {v} years old")
+def factorial(number):
+    total = 1
+    for i in range(1, number + 1):
+        total *= i
+
+    return total
 
 
-some_func(name="Plamen", town='Byala', age=34)
+print(factorial(20))
