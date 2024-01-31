@@ -1,6 +1,11 @@
 import os
 
-path = os.path.join('D:', 'New Python Projects', '07_TEST_DIRECTORY', 'text.txt')
+file_name = 'text.txt'
+path = os.path.join('test', file_name)
 
-file = open(path)
-print(file.read())
+try:
+    file = open(path)
+    print('File found!')
+    print(file.read())
+except FileNotFoundError:
+    print('File not found!')
