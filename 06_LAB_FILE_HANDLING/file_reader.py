@@ -10,3 +10,5 @@ for num in file.readlines():
     sum_numbers += int(num)
 
 print(sum_numbers)
+
+#test
