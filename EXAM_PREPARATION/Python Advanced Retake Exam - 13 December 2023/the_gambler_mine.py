@@ -1,5 +1,6 @@
 amount = 100
 
+
 def last_pos():
     matrix[current_row][current_col] = '-'
 
@@ -9,7 +10,7 @@ def valid_index(row, col):
         return True
     else:
         print(f"Game over! You lost everything!")
-        exit()  # -> може да даде грешка, провери дали приключва програмата след exit()
+        exit()
 
 
 def pos_loot(loot: str):
