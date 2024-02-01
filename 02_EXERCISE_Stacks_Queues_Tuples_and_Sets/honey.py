@@ -45,9 +45,9 @@ if nectar:
 
 # from collections import deque
 #
-# bees = deque(int(x) for x in input().split())
-# nectar = [int(x) for x in input().split()]
-# symbols = deque(input().split())
+# bees = deque(int(x) for x in input.txt().split())
+# nectar = [int(x) for x in input.txt().split()]
+# symbols = deque(input.txt().split())
 #
 # total_honey = 0
 #

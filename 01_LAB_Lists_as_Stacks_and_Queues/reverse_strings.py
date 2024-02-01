@@ -1,4 +1,4 @@
-# string_line = input()
+# string_line = input.txt()
 # new_string = ''
 # for index in range(len(string_line), -1, -1):
 #     if index == 0:

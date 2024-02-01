@@ -33,5 +33,5 @@ print(negative_vs_positive(*numbers))
 #         print(f"The negatives are stronger than the positives")
 #
 #
-# numbers = [int(i) for i in input().split()]
+# numbers = [int(i) for i in input.txt().split()]
 # negative_vs_positive(numbers)

@@ -23,8 +23,8 @@ while command != 'END':
             for element in matrix:
                 print(*element)
         else:
-            print(f"Invalid input!")
+            print(f"Invalid input.txt!")
     except:
-        print('Invalid input!')
+        print('Invalid input.txt!')
 
     command = input()

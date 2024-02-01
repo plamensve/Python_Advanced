@@ -19,8 +19,8 @@ for row in range(rows):
 
 # from collections import deque
 #
-# rows, cols = [int(x) for x in input().split()]
-# word = list(input())
+# rows, cols = [int(x) for x in input.txt().split()]
+# word = list(input.txt())
 #
 # word_copy = deque(word)
 # multiplier = 1

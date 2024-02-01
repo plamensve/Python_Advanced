@@ -25,7 +25,7 @@ while email != 'End':
 
     name = email.split('@')  # Check for the length of the name before the @ symbol
     length_of_name = len(name[0])  # Check for the length of the name before the @ symbol
-    count_at_symbol = email.count('@')  # Check for the count of the '@' symbol in the input
+    count_at_symbol = email.count('@')  # Check for the count of the '@' symbol in the input.txt
     domain = email.split('.')  # domain[-1] Check for used domain extension
 
     if length_of_name <= EMAIL_NAME:
@@ -40,7 +40,7 @@ while email != 'End':
     elif domain[-1] not in DOMAINS:
         raise InvalidDomainError('Domain must be one of the following: .com, .bg, .org, .net')
 
-    pattern = r'^([a-z][a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$'  # We check the entire structure of the input
+    pattern = r'^([a-z][a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$'  # We check the entire structure of the input.txt
     matches = re.findall(pattern, email)
 
     if not matches:

@@ -3,7 +3,7 @@ from collections import deque
 # Initialize altitude names
 altitude_names = deque(["Altitude 1", "Altitude 2", "Altitude 3", "Altitude 4"])
 
-# Read input sequences
+# Read input.txt sequences
 fuel = list(map(int, input().split()))
 consumption_index = deque(map(int, input().split()))
 needed_fuel_amount = deque(map(int, input().split()))

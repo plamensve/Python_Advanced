@@ -82,10 +82,10 @@ for el in matrix:
 
 # ------------------ SECOND SOLUTRION --------------------------------------
 
-# n = int(input())
+# n = int(input.txt())
 
-# matrix = [[int(x) for x in input().split()] for _ in range(n)]
-# coordinates = ((int(x) for x in c.split(",")) for c in input().split()) # 1,2  3,4  5,6 => ["1,2", "3,4", "5, 6"] =>
+# matrix = [[int(x) for x in input.txt().split()] for _ in range(n)]
+# coordinates = ((int(x) for x in c.split(",")) for c in input.txt().split()) # 1,2  3,4  5,6 => ["1,2", "3,4", "5, 6"] =>
 # # ((1, 2), (3, 4), (5, 6))
 #
 # for row, col in coordinates:

@@ -2,7 +2,7 @@ def team_lineup(*args):
     # Count the number of players per country
     country_count = {}
 
-    # Iterate through the input arguments and count players per country
+    # Iterate through the input.txt arguments and count players per country
     for player, country in args:
         if country not in country_count:
             country_count[country] = []
@@ -12,7 +12,7 @@ def team_lineup(*args):
     # Sort the countries by the number of players (descending) and then by country name length
     sorted_countries = dict(sorted(country_count.items(), key=lambda x: (-len(x[1]), (x[0]))))
 
-    # Generate the output
+    # Generate the output.txt
     result = ''
     for country, player_names in sorted_countries.items():
         result += f'{country}:\n'
