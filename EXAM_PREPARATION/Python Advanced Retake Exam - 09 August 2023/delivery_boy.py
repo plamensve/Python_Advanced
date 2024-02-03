@@ -24,7 +24,6 @@ def next_position(next_r, next_c):
 
 
 matrix_row, matrix_col = list(input().split())
-
 matrix = []
 for row in range(int(matrix_row)):
     sub_matrix = []
@@ -47,9 +46,7 @@ for r in range(int(matrix_row)):
             start_position = [r, c]
 
 while True:
-
     command = input()
-
     if command == 'down':
         next_row = directions[command][0] + position[0]
         next_col = directions[command][1] + position[1]
@@ -62,7 +59,6 @@ while True:
             result = next_position(next_row, next_col)
             if result:
                 break
-
     elif command == 'up':
         next_row = directions[command][0] + position[0]
         next_col = directions[command][1] + position[1]
@@ -75,7 +71,6 @@ while True:
             result = next_position(next_row, next_col)
             if result:
                 break
-
     elif command == 'left':
         next_row = directions[command][0] + position[0]
         next_col = directions[command][1] + position[1]
@@ -88,7 +83,6 @@ while True:
             result = next_position(next_row, next_col)
             if result:
                 break
-
     elif command == 'right':
         next_row = directions[command][0] + position[0]
         next_col = directions[command][1] + position[1]
@@ -101,7 +95,6 @@ while True:
             result = next_position(next_row, next_col)
             if result:
                 break
-
 matrix[start_position[0]][start_position[1]] = 'B'
 for row in matrix:
     print(''.join(row))
