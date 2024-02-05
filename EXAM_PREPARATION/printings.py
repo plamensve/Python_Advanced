@@ -18,3 +18,24 @@
 """
 Внимателно проверявай изискванията какво трябва да се принтира!
 """
+
+# --------------------------------- ЗАДАЧИ 2 с МАТРИЦИ#
+"""
+Откриване на координатите (индексите) в матрица
+"""
+size_r, size_c = [int(x) for x in input().split()]
+
+matrix = []
+for row in range(size_r):
+    sub_matrix = []
+    for col in input().split():
+        sub_matrix.append(col)
+    matrix.append(sub_matrix)
+
+for row_index in range(size_r):
+    for col_index in range(size_c):
+        if matrix[row_index][col_index] == 'B':
+            position = [row_index, col_index]
+            print(position)
+
+# ---------------------------------------------#
