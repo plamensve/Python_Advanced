@@ -1,8 +1,10 @@
 from collections import deque
 
-food = deque([int(x) for x in input().split(', ')])
-stamina = deque([int(y) for y in input().split(', ')])
+daily_food = list(map(int, input().split(", ")))
+daily_stamina = deque(map(int, input().split(", ")))
 
+day = 1
+conquered_peaks = []
 all_peaks = deque([
     ("Vihren", 80),
     ("Kutelo", 90),
@@ -11,29 +13,27 @@ all_peaks = deque([
     ("Kamenitza", 70)
 ])
 
-days = 1
-peaks_conquered = []
 while True:
-    if len(peaks_conquered) == 5:
+    if len(conquered_peaks) == 5:
         print("Alex did it! He climbed all top five Pirin peaks in one week -> @FIVEinAWEEK")
         break
-    if days > 7 or not food or not stamina:
+    if day > 7 or not daily_food or not daily_stamina:
         print("Alex failed! He has to organize his journey better next time -> @PIRINWINS")
         break
-
-    curr_food = food.pop()
-    curr_stamina = stamina.popleft()
-    result = curr_food + curr_stamina
-
+    food = daily_food.pop()
+    stamina = daily_stamina.popleft()
+    result = food + stamina
+    index = 0
     next_peak = all_peaks.popleft()
     if result >= next_peak[1]:
-        days += 1
-        peaks_conquered.append(next_peak[0])
+        conquered_peaks.append(next_peak[0])
+        day += 1
     else:
-        days += 1
         all_peaks.appendleft(next_peak)
+        day += 1
 
-if peaks_conquered:
+
+if conquered_peaks:
     print("Conquered peaks:")
-    for peak in peaks_conquered:
+    for peak in conquered_peaks:
         print(peak)
