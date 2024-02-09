@@ -33,3 +33,4 @@ if paper_size:
     print(f"Pieces of paper left:",', '.join(map(str, paper_size)))
 if egg_size:
     print(f"Eggs left:",', '.join(map(str, egg_size)))
+#test
