@@ -23,20 +23,15 @@
 """
 Откриване на координатите (индексите) в матрица
 """
-size_r, size_c = [int(x) for x in input().split()]
-
+SIZE = 6
 matrix = []
-for row in range(size_r):
+for row in range(SIZE):
     sub_matrix = []
     for col in input().split():
         sub_matrix.append(col)
+        if 'E' in sub_matrix:
+            position = [row, sub_matrix.index('E')]
     matrix.append(sub_matrix)
-
-for row_index in range(size_r):
-    for col_index in range(size_c):
-        if matrix[row_index][col_index] == 'B':
-            position = [row_index, col_index]
-            print(position)
 
 # ---------------------------------------------#
 
@@ -48,16 +43,20 @@ for row_index in range(size_r):
 """
 Когато излизаме от матрицата и влизаме през срещуположната страна - телепортиране :D
 """
-# def check_index(next_r, next_c):
-#     if 0 <= next_r < SIZE and 0 <= next_c < SIZE:
-#         return next_r, next_c
-#
-#     elif 0 > next_r and 0 <= next_c < SIZE:
-#         return next_r + SIZE, next_c
-#     elif 0 <= next_r == SIZE:
-#         return next_r - SIZE, next_c
-#
-#     elif 0 <= next_r < SIZE and 0 > next_c:
-#         return next_r, next_c + SIZE
-#     elif 0 <= next_r < SIZE and next_c == SIZE:
-#         return next_r, next_c - SIZE
+
+
+def check_index(next_r, next_c):
+    if 0 <= next_r < SIZE and 0 <= next_c < SIZE:
+        return next_r, next_c
+
+    elif 0 > next_r and 0 <= next_c < SIZE:
+        return next_r + SIZE, next_c
+    elif 0 <= next_r == SIZE:
+        return next_r - SIZE, next_c
+
+    elif 0 <= next_r < SIZE and 0 > next_c:
+        return next_r, next_c + SIZE
+    elif 0 <= next_r < SIZE and next_c == SIZE:
+        return next_r, next_c - SIZE
+
+# ----------------------------------------------------- #
