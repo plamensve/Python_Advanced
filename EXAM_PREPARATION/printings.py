@@ -44,3 +44,20 @@ for row_index in range(size_r):
 Може да се появят проблеми ако се опитвам да закръглям с rounde(). По-доброто решение е, при принтирането на данните
 да се закръгли с :.2f и т.н.
 """
+
+"""
+Когато излизаме от матрицата и влизаме през срещуположната страна - телепортиране :D
+"""
+# def check_index(next_r, next_c):
+#     if 0 <= next_r < SIZE and 0 <= next_c < SIZE:
+#         return next_r, next_c
+#
+#     elif 0 > next_r and 0 <= next_c < SIZE:
+#         return next_r + SIZE, next_c
+#     elif 0 <= next_r == SIZE:
+#         return next_r - SIZE, next_c
+#
+#     elif 0 <= next_r < SIZE and 0 > next_c:
+#         return next_r, next_c + SIZE
+#     elif 0 <= next_r < SIZE and next_c == SIZE:
+#         return next_r, next_c - SIZE
