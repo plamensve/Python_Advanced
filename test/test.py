@@ -1,2 +1,2 @@
-a = ['The Godfather', 'The Shawshank Redemption', 'The Pursuit of Happiness']
-print(sorted(a, key=lambda s: s))
+list = [[0]*3 for i in range(5)]
+print(list)
